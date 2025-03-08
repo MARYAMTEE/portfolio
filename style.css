@@ -31,16 +31,81 @@ button{
 	font-size: 16px;
 	padding: 13px 23px;
 	border-radius: 7px;
+	border: none;
+	background-color: transparent;
+}
+
+/*Navigation Menu*/
+.menu-icon .nav-menu{
+	display: block;
+	background-color: var(--vtw);
+	position: fixed;
+	top: 0;
+	right: -250px;
+	height: 100%;
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 260px;
+}
+
+body.show-mobile-menu .menu-icon .nav-menu{
+	right: 0;
+}
+
+body.show-mobile-menu header::before{
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-filter: blur(5px);
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon .nav-menu .nav-link {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.menu-icon .nav-item{
+	width: 250px;
+	margin-bottom: 20px;
+	background-color: var(--vt);
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-icon .nav-menu .nav-link i{
+	color: white;
+	font-size: 14px;
+	margin-top: 35px;
+	padding-right: 35px
+}
+
+.menu-icon #open-menu-btn, #close-menu-btn{
+	font-size: 1.3rem;
+	display: block;
+	color: white;
+	position: fixed;
+}
+
+.menu-icon #close-menu-btn{
+	position:absolute;
+	top: 30px;
+	left: 10px;
 }
 
 .menu-icon{
 	display: flex;
 	justify-content: flex-end;
 	padding: 40px 40px 0 0;
-}
-
-.menu-icon i{
-	font-size: 20px;
+	background-color: var(--Deep-navy);
 }
 
 
@@ -48,18 +113,11 @@ main{
 	background-color: var(--Deep-navy);
 }
 
-/* Navigation Bar*/
-
-nav{
-	padding: 20px;
-	background-color: var(--Deep-navy);
-}
-
 /*Left Section*/
 
 .left-side{
 	width: 250px;
-	height: 100%;
+	height: 100vh;
 	background-color: var(--vtw);
 	position: fixed;
 	z-index: 1;
@@ -146,7 +204,7 @@ nav{
 /*Progress Bar Animation*/
 
 .html{
-	width: 75%;
+	width: 80%;
 	animation: html 3s;
 }
 
@@ -155,12 +213,12 @@ nav{
 		width: 0%;
 	}
 	100%{
-		width: 75%;
+		width: 80%;
 	}
 }
 
 .css{
-	width: 90%;
+	width: 85%;
 	animation: css 3s;
 }
 
@@ -169,21 +227,7 @@ nav{
 		width: 0%;
 	}
 	100%{
-		width: 90%;
-	}
-}
-
-.bootstrap{
-	width: 80%;
-	animation: bootstrap 3s;
-}
-
-@keyframes bootstrap {
-	0%{
-		width: 0%;
-	}
-	100%{
-		width: 80%;
+		width: 85%;
 	}
 }
 
@@ -201,8 +245,22 @@ nav{
 	}
 }
 
+.bootstrap{
+	width: 70%;
+	animation: bootstrap 3s;
+}
+
+@keyframes bootstrap {
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 70%;
+	}
+}
+
 .git{
-	width: 50%;
+	width: 70%;
 	animation: git 3s;
 }
 
