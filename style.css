@@ -10,8 +10,10 @@
 :root{
 	--cool-mint: #2ECC71;
 	--Deep-navy: #14213D;
+	--light-navy: #14213d45;
 	--vtw: #d9d9d905;
 	--vt: #d9d9d912;
+	--soft-gray: #E5E5E5;
 }
 
 /* General styling*/
@@ -19,12 +21,6 @@ body{
 	font-family: "Inter", serif;
 	color: white;
 	background-color: var(--Deep-navy);
-}
-
-main{
-	background-color: var(--Deep-navy);
-	color: white;
-	font-family: "Inter", serif;
 }
 
 ul{
@@ -44,7 +40,6 @@ button{
 
 /*Navigation Menu*/
 .menu-icon .nav-menu{
-	display: block;
 	background-color: var(--vtw);
 	position: fixed;
 	top: 0;
@@ -112,6 +107,14 @@ body.show-mobile-menu header::before{
 	background-color: var(--Deep-navy);
 }
 
+#open-btn{
+	display: none;
+}
+
+.user-info #close-btn{
+	display: none;
+}
+
 /*Left Section*/
 .left-side{
 	width: 250px;
@@ -122,13 +125,14 @@ body.show-mobile-menu header::before{
 	top: 0;
 	left: 0;
 	overflow: hidden;
+	display: block;
 }
 
 #side-details{
 	position: relative;
 }
 
-#user-info{
+.user-info{
 	overflow: hidden;
 	background-color: var(--vt);
 	padding: 20px 0;
@@ -389,7 +393,7 @@ input:checked + .slider:before{
 	padding: 20px 60px;
 }
 
-#description-info{
+.description-info{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -417,6 +421,7 @@ input:checked + .slider:before{
 .btns{
 	display: flex;
 	gap: 20px;
+	padding-top: 10px;
 }
 
 .git-btn{
@@ -456,4 +461,115 @@ input:checked + .slider:before{
 	justify-content: center;
 	align-items: center;
 	gap: 20px;
+}
+
+
+@media screen and (max-width:900px){
+	
+/* Left side hide button*/
+	.left-side{
+	top: 0;
+	left: -250px;
+	height: 100%;
+	z-index: 5;
+	background-color: var(--soft-gray);
+	color: var(--Deep-navy);
+}
+	
+	body.show-menu .left-side{
+	left: 0;
+}
+	
+	body.show-menu main::before{
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-filter: blur(5px);
+	background: rgba(0, 0, 0, 0.2);
+}
+	
+	#open-btn, .user-info #close-btn{
+		position: absolute;
+		display: block;
+		font-size: 1.3rem;
+	}
+	
+	.user-info #close-btn{
+		right: 10px;
+		top: 30px;
+		color: var(--Deep-navy);
+	}
+	
+	#open-btn{
+		color: white;
+		top: 10px;
+		left: 10px;
+	}
+	
+	/*Middle Section*/
+	.middle-section{
+		margin: 0;
+	}
+	
+	.description-info{
+		display: block;
+		text-align: center;
+	}
+	.section2-image{
+		display: none;
+	}
+	
+	.section2-image img{
+		display: none;
+	}
+	
+	.second-section{
+		width: 350px;
+		height: 200px;
+		padding: 20px;
+	}
+	
+	#home{
+		display: flex;
+		justify-content: center;
+		padding: 100px 10px;
+		height: 100%;
+	}
+	
+	button{
+		font-size: 12px;
+		padding: 10px 13px;
+	}
+	
+	.para1-section2{
+		font-size: 12px;
+		width: 300px
+	}
+	
+	.btns{
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.heading-1-section2{
+		font-size: 14px;
+	}
+	
+	/*Skills*/
+	.skills ul{
+	padding: 20px ;
+}
+	
+	/*Social Ions*/
+	.social-icons{
+		background-color: var(--light-navy);
+	}
+	
+	.progress-bar{
+		background-color: var(--light-navy);
+	}
+	
 }

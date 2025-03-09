@@ -1,5 +1,6 @@
 <!doctype html>
-<html><head>
+<html>
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="Description" content="portfolio">
@@ -27,6 +28,7 @@
 <body>
 	<header>
 		<nav class="menu-icon">
+			
 			<ul class="nav-menu">
 			  <button id="close-menu-btn" class="fas fa-times"></button>
 				
@@ -40,11 +42,16 @@
 			<button id="open-menu-btn" class="fas fa-bars"></button>
 	  </nav>
 	</header>
+	
+	
+	
 	<main class="main">
+		<i id="open-btn" class="far fa-caret-square-down"></i>
 		<section class="left-side section">
 		  <div id="side-details">
 			<!-- User Information-->
-			<div id="user-info">
+			<div class="user-info">
+				<button id="close-btn" class="fas fa-times"></button>
 				<div id="user__image">
 			    	<img src="media/user-image.png" id="user-image" alt="Owner's Image"/> 
 				</div>
@@ -112,11 +119,12 @@
 		  </div>
   </section>
 		
+		
 	<!--Middle Section-->
 	<section class="middle-section">
 		<section id="home">
 		  <div class="second-section">
-			<div id="description-info">
+			<div class="description-info">
 			  <div class="section2-details">
 				<h1 class="heading-1-section2">Ayorinde Maryam Oluwatoyin</h1>
 				<p class="para1-section2">I am a front-end web developer who loves creating clean and user-friendly websites. I enjoy bringing ideas to life with cool designs and smooth experiences.</p>
