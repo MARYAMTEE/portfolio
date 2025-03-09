@@ -559,9 +559,6 @@ input:checked + .slider:before{
 	}
 	
 	/*Skills*/
-	.skills ul{
-	padding: 20px ;
-}
 	
 	/*Social Ions*/
 	.social-icons{
