@@ -594,7 +594,7 @@ input:checked + .slider:before{
 	
 	.social-icons li a{
 		color: var(--Deep-navy);
-	}
+}
 	
 	.social-icons li a:hover{
 		color: white;
