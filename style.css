@@ -592,6 +592,18 @@ input:checked + .slider:before{
 		background-color: var(--light-navy);
 	}
 	
+	.social-icons li a{
+		color: var(--Deep-navy);
+	}
+	
+	.social-icons li a:hover{
+		color: white;
+	}
+	
+	.social-icons li a:visited{
+		color: var(--cool-mint);
+	}
+	
 	.progress-bar{
 		background-color: var(--light-navy);
 	}
