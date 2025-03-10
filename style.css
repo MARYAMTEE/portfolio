@@ -184,6 +184,7 @@ body.show-mobile-menu header::before{
 
 .skills p{
 	font-family: "Inter", serif;
+	font-weight: 600;
 	font-size: 12px;
 	line-height: 2;
 }
