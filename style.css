@@ -192,7 +192,7 @@ body.show-mobile-menu header::before{
 }
 
 .skills ul{
-	padding: 55px 20px 50px;
+	padding: 55px 20px 0;
 }
 
 .skills li{
@@ -501,6 +501,7 @@ input:checked + .slider:before{
 	background-color: var(--soft-gray);
 	color: var(--Deep-navy);
     top: 0;
+	height: 100%;
     left: -250px !important;
 	transition: 0.5s ease-in-out;
 }
