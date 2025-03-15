@@ -1,5 +1,5 @@
 // JavaScript Document
-
+const navLinks = document.querySelectorAll(".nav-list .nav-link");
 const menuOpenButton = document.querySelector("#open-menu-btn");
 const menuCloseButton = document.querySelector("#close-menu-btn");
 
@@ -23,3 +23,8 @@ openButton.addEventListener("click", () => {
 
 // Closes menu button
 closeButton.addEventListener("click", () => openButton.click());
+
+// close when the navlink is clicked
+navLinks.forEach(link => {
+	link.addEventListener("click", () => menuOpenButton.click())
+})

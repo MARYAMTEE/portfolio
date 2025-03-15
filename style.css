@@ -485,7 +485,7 @@ input:checked + .slider:before{
 }
 
 .about-text{
-	padding-bottom: 10px;
+	padding-bottom: 15px;
 }
 #about-me{
 	height: 100vh;
@@ -524,7 +524,7 @@ input:checked + .slider:before{
 .column-two h3{
 	font-family: "Montserrat", serif;
 	font-size: 16px;
-/*	color: var(--cool-mint);*/
+	color: var(--cool-mint);
 }
 
 .column-two p{
@@ -722,6 +722,7 @@ input:checked + .slider:before{
 	/*Middle Section*/
 	.middle-section{
 		margin: 0;
+		height: 100%;
 	}
 	
 	.description-info{
