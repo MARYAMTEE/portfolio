@@ -537,7 +537,6 @@ input:checked + .slider:before{
 .column-two table{
 	width: 100%;
 	border-collapse: collapse;
-	
 }
 
 .column-two table td{
@@ -724,7 +723,6 @@ input:checked + .slider:before{
 	/*Middle Section*/
 	.middle-section{
 		margin: 0;
-		height: 100%;
 	}
 	
 	.description-info{
@@ -750,7 +748,8 @@ input:checked + .slider:before{
 	#home{
 		display: flex;
 		justify-content: center;
-		padding: 100px 10px;
+		padding: 100px 10px 50px;
+		height: 100%;
 	}
 	
 	button{
@@ -797,33 +796,43 @@ input:checked + .slider:before{
 	#about-me{
 		display: flex;
 		justify-content: center;
-		padding: 50px 20px;
+		padding: 50px 10px;
+		height: 100%;
 	}
-	
 	.wrapper{
 		flex-direction: column-reverse;
 	}
 	
 	.about-wrapper{
-		text-align: center;
 		font-size: 12px;
+		width: 100%;
+		max-width: 22rem;
 	}
 	
 	#abt-txt{
-		
+		text-align: center;
+		font-size: 30px;
 	}
 	
 	.column-two h3{
-		font-size: 14px;
-		
+		font-size: 12px;
+		text-align: center;
 	}
 	
 	.column-two p{
-		
+		font-size: 12px;
 	}
 	
-	.column-two table td{
-	text-align: left;
+	.column-one{
+		grid-template-columns: 1fr;
+	}
+	
+	.skills-container{
+		padding: 20px;
+	}
+	
+	.column-two table{
+		padding: 35px 0;
 	}
 }
 
