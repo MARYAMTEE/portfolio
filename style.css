@@ -471,6 +471,163 @@ input:checked + .slider:before{
 	padding: 100px 70px;
 }
 
+/* About Me Section*/
+#about-me{
+	height: 100vh;
+	padding: 30px 70px;
+}
+
+.wrapper{
+	display:flex;
+	gap: 20px;
+	margin-right: 5px;
+}
+
+.about-wrapper{
+	
+}
+
+.skills-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: var(--vt);
+	border: 2px solid var(--soft-gray);
+	border-radius: 15px;
+	padding: 30px;
+}
+
+.column{
+	flex: 1;
+}
+
+.column-one{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	justify-content: center;
+	align-content: center;
+}
+
+.column-two p{
+	padding: 20px 0;
+}
+
+.column-two table{
+	width: 100%;
+	border-collapse: collapse;
+	
+}
+
+.column-two table td{
+	padding: 18px 0;
+}
+
+.column-two table th{
+	text-align: left;
+}
+
+
+.column-two table tr{
+	border-bottom: 1px solid white;
+}
+
+.column-two table tr:nth-child(odd){
+	background-color: var(--vt);
+}
+
+.column-two table tr:hover{
+	background-color: var(--light-navy);
+}
+
+/* Loader */
+.progress-circle{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	position: relative;
+}
+
+.progress-circle::before{
+	content: "";
+	position: absolute;
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	background-color: var(--Deep-navy);
+}
+
+.percentage {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+	color: white;
+}
+
+/* Progress Circle animation*/
+.html-circle{
+	background: conic-gradient(white calc(80 * 3.6deg), var(--vt) calc(80 * 3.6deg));
+	animation: html-circle 3s;
+}
+
+@keyframes html-circle{
+	0% {
+                background: conic-gradient(white 0deg, var(--vt) 0deg);
+            }
+	100% {
+		background: conic-gradient(white calc(80 * 3.6deg), var(--vt) calc(80 * 3.6deg));
+	}
+}
+
+.css-circle{
+	background: conic-gradient(white calc(85 * 3.6deg), var(--vt) calc(85 * 3.6deg));
+	animation: css-circle 3s;
+}
+
+@keyframes css-circle{
+	0% {
+                background: conic-gradient(white 0deg, var(--vt) 0deg);
+            }
+	100% {
+		background: conic-gradient(white calc(85 * 3.6deg), var(--vt) calc(35 * 3.6deg));
+	}
+}
+
+.javascript-circle{
+	background: conic-gradient(var(--cool-mint) calc(50 * 3.6deg), var(--vt) calc(50 * 3.6deg));
+	animation: javascript-circle 3s;
+}
+
+@keyframes javascript-circle{
+	0% {
+                background: conic-gradient(var(--cool-mint) 0deg, var(--vt) 0deg);
+            }
+	100% {
+		background: conic-gradient(var(--cool-mint) calc(50 * 3.6deg), var(--vt) calc(50 * 3.6deg));
+	}
+}
+
+.bootstrap-circle{
+	background: conic-gradient(white calc(70 * 3.6deg), var(--vt) calc(70 * 3.6deg));
+	animation: bootstrap-circle 3s;
+}
+
+@keyframes bootstrap-circle{
+	0% {
+                background: conic-gradient(white 0deg, var(--vt) 0deg);
+            }
+	100% {
+		background: conic-gradient(white calc(70 * 3.6deg), var(--vt) calc(70 * 3.6deg));
+	}
+}
+
+
+/* Mobile device viewport*/
 @media screen and (max-width: 700px){
 	
 	/*Navigation Menu*/
