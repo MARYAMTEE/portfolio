@@ -21,6 +21,7 @@ body{
 	font-family: "Inter", serif;
 	color: white;
 	background-color: var(--Deep-navy);
+	overflow-x: hidden;
 }
 
 img{
@@ -41,6 +42,46 @@ button{
 	border: none;
 	background-color: transparent;
 }
+
+/*Stars*/
+.stars{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+.star{
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	border-radius: 50%;
+	background-color: white;
+	box-shadow: 0 0 5px white, 0 0 10px white;
+	animation: twinkle 1.5s infinite alternate ease-in-out, moveAround 10s infinite linear;
+}
+
+@keyframes twinkle{
+	0%{
+		opacity: 0.3s;
+		transform: scale(0.8);
+	}
+	100%{
+		opacity: 1; transform: scale(1.2);
+	}
+}
+
+@keyframes moveAround{
+	0%{
+		transform: translateY(0px) translateX(0px);
+	}
+	50%{
+		transform: translateY(-20px) translateX(20px);
+	}
+	100%{
+		transform: translateY(0px) translateX(0px);
+	}
+}
+
 
 /*Navigation Menu*/
 .menu-icon .nav-menu{
@@ -643,6 +684,13 @@ input:checked + .slider:before{
 	100% {
 		background: conic-gradient(white calc(70 * 3.6deg), var(--vt) calc(70 * 3.6deg));
 	}
+}
+
+/* Toggle Mode */
+
+.light-mode{
+	background-color: white;
+	color: black;
 }
 
 
