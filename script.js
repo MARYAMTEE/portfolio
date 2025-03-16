@@ -57,7 +57,7 @@ function createStars(count) {
             }
         }
 
-        createStars(250); 
+        createStars(200); 
 
 // Toogle button
 document.addEventListener("DOMContentLoaded", function () {
