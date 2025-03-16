@@ -58,3 +58,25 @@ function createStars(count) {
         }
 
         createStars(250); 
+
+// Toogle button
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleSwitch = document.getElementById("switch");
+    const body = document.body;
+
+    // Check if dark mode was previously enabled
+    if (localStorage.getItem("lightMode") === "enabled") {
+        body.classList.add("light-mode");
+        toggleSwitch.checked = true;
+    }
+
+    toggleSwitch.addEventListener("change", function () {
+        if (this.checked) {
+            body.classList.add("light-mode");
+            localStorage.setItem("lightMode", "enabled");
+        } else {
+            body.classList.remove("light-mode");
+            localStorage.setItem("lightMode", "disabled");
+        }
+    });
+});
