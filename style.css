@@ -42,6 +42,11 @@ button{
 	border-radius: 7px;
 	border: none;
 	background-color: transparent;
+	transition: transform 0.4s ease;
+}
+
+button:hover{
+	transform: scale(1.1) translateZ(10px);
 }
 
 /*Stars*/
@@ -442,6 +447,12 @@ input:checked + .slider:before{
 
 .social-icons li a{
 	color: white;
+	transition: color 0.5s ease, transform 0.3s ease;
+}
+
+.social-icons li a:hover{
+	color: var(--cool-mint);
+	transform: translateY(-3px);
 }
 
 
@@ -753,6 +764,10 @@ input:checked + .slider:before{
 	background-color: var(--Deep-navy);
 }
 
+.light-mode .social-icons a:hover{
+	color: var(--cool-mint);
+}
+
 
 /* Mobile device viewport*/
 @media screen and (max-width: 700px){
@@ -887,11 +902,6 @@ input:checked + .slider:before{
 	.social-icons li a{
 		color: var(--Deep-navy);
 }
-	
-	.social-icons li a:hover{
-		color: white;
-	}
-	
 	.social-icons li a:visited{
 		color: var(--cool-mint);
 	}
