@@ -751,7 +751,6 @@ input:checked + .slider:before{
 
 .light-mode .star{
 	background-color: var(--Deep-navy);
-	box-shadow: 0 0 5px var(--Deep-navy), 0 0 10px var(--Deep-navy);
 }
 
 
