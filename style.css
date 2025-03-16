@@ -740,6 +740,11 @@ input:checked + .slider:before{
 	background-color: var(--vt);
 }
 
+.light-mode .star{
+	background-color: var(--Deep-navy);
+	box-shadow: 0 0 5px (--Deep-navy), 0 0 10px (--Deep-navy);
+}
+
 
 /* Mobile device viewport*/
 @media screen and (max-width: 700px){
