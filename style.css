@@ -19,11 +19,17 @@
 
 /* General styling*/
 body{
+	font-weight: normal !important;
 	font-family: "Inter", serif;
 	color: white;
 	background-color: var(--Deep-navy);
 	overflow-x: hidden;
 }
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Montserrat", serif;
+}
+
 
 img{
 	max-width: 100%;
@@ -209,7 +215,6 @@ body.show-mobile-menu header::before{
 }
 
 #user-identity h1{
-	font-family: "Montserrat", serif;
 	font-size: 12px;
 	font-weight: 600;
 }
@@ -249,7 +254,7 @@ body.show-mobile-menu header::before{
 
 .skills p{
 	font-family: "Inter", serif;
-	font-weight: 600;
+	font-weight: 600 !important;
 	font-size: 12px;
 	line-height: 2;
 }
@@ -466,6 +471,7 @@ input:checked + .slider:before{
 	background-color: var(--vt);
 	width: 800px;
 	padding: 20px 60px;
+	box-shadow:  0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
 
 .description-info{
@@ -481,7 +487,6 @@ input:checked + .slider:before{
 
 /*H1*/
 .heading-1-section2{
-	font-family: "Montserrat", sans-serif;
 	text-transform: uppercase;
 }
 
@@ -529,7 +534,7 @@ input:checked + .slider:before{
 #abt-txt{
 	font-family: "Montserrat", serif;
 	font-size: 40px;
-	font-weight: bold;
+	font-weight: bold !important;
 	letter-spacing: 3px;
 	background-image: linear-gradient(135deg, white, var(--cool-mint));
 	background-clip: text;
@@ -604,7 +609,6 @@ input:checked + .slider:before{
 	text-align: left;
 	
 }
-
 
 .column-two table tr{
 	border-bottom: 1px solid var(--cool-mint);
@@ -783,6 +787,73 @@ input:checked + .slider:before{
 
 .light-mode .bootstrap-circle{
 	background: conic-gradient(white calc(70 * 3.6deg), var(--light-navy) calc(70 * 3.6deg));
+}
+
+.light-mode .resume-section h1{
+	text-decoration: 2px underline var(--Deep-navy);
+}
+
+.light-mode #middle-line{
+	border-left: 2px solid var(--Deep-navy);
+}
+
+/* Resume Section*/
+#resume{
+	height: 100vh;
+	padding: 50px 70px;
+}
+.resume-section{
+	display: flex;
+	height: 500px;
+}
+
+#middle-line{
+	border-left: 2px solid white;
+	padding: 0 15px;
+	position: relative;
+}
+
+#middle-line::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: var(--cool-mint);
+}
+
+
+
+/* Resume List*/
+.resume-section h1{
+	font-weight: 600 !important;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	text-decoration: 2px underline white; 
+	text-underline-offset: 5px;
+}
+
+.resume-section p span{
+	font-weight: bold;
+}
+
+.resume-section ul{
+	list-style-type: disc;
+	padding: 15px 0;
+}
+
+.resume-section ul .certs-list{
+	padding-bottom: 15px;
+	font-weight: 500 !important;
+}
+
+.second-list-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 }
 
 
