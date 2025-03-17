@@ -802,6 +802,7 @@ input:checked + .slider:before{
 	height: 100vh;
 	padding: 50px 70px;
 }
+
 .resume-section{
 	display: flex;
 	height: 500px;
@@ -824,8 +825,6 @@ input:checked + .slider:before{
 	border-radius: 50%;
 	background-color: var(--cool-mint);
 }
-
-
 
 /* Resume List*/
 .resume-section h1{
@@ -1011,6 +1010,23 @@ input:checked + .slider:before{
 	
 	.light-mode .left-side{
 		background-color: var(--soft-gray);
+	}
+	
+	/* Resume Section */
+	#resume{
+		display: flex;
+		justify-content: center;
+		padding: 50px 10px;
+		height: 100%;
+	}
+	
+	.resume-section{
+		flex-direction: column;
+		padding: 0 20px;
+	}
+	
+	#middle-line{
+		display: none;
 	}
 }
 
