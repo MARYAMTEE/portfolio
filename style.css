@@ -769,6 +769,22 @@ input:checked + .slider:before{
 	color: var(--cool-mint);
 }
 
+.light-mode .html-circle{
+	background: conic-gradient(white calc(80 * 3.6deg), var(--light-navy) calc(80 * 3.6deg));
+}
+
+.light-mode .css-circle{
+	background: conic-gradient(white calc(85 * 3.6deg), var(--light-navy) calc(35 * 3.6deg));
+}
+
+.light-mode .javascript-circle{
+	background: conic-gradient(var(--cool-mint) calc(50 * 3.6deg), var(--light-navy) calc(50 * 3.6deg));
+}
+
+.light-mode .bootstrap-circle{
+	background: conic-gradient(white calc(70 * 3.6deg), var(--light-navy) calc(70 * 3.6deg));
+}
+
 
 /* Mobile device viewport*/
 @media screen and (max-width: 700px){
