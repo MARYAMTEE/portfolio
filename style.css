@@ -91,7 +91,7 @@ button:hover{
 
 /*Navigation Menu*/
 .menu-icon .nav-menu{
-	background-color: var(--vtw);
+	background-color: var(--vt);
     position: fixed;
     top: 0;
     right: -250px; 
@@ -607,7 +607,7 @@ input:checked + .slider:before{
 
 
 .column-two table tr{
-	border-bottom: 1px dashed white;
+	border-bottom: 1px solid var(--cool-mint);
 }
 
 .column-two table tr:nth-child(odd){
@@ -712,6 +712,7 @@ input:checked + .slider:before{
 }
 
 .light-mode .second-section,
+.light-mode .progress-bar,
 .light-mode .user-info,
 .light-mode .social-icons, 
 .light-mode .column-two table tr:nth-child(odd) {
@@ -773,6 +774,7 @@ input:checked + .slider:before{
 @media screen and (max-width: 700px){
 	
 	/*Navigation Menu*/
+/*
 	.menu-icon .nav-menu{
 		background-color: var(--soft-gray);
 		color: var(--Deep-navy);
@@ -790,15 +792,18 @@ input:checked + .slider:before{
 		color: var(--cool-mint);
 	}
 	
-	#close-menu-btn{
-		color: var(--Deep-navy);
-	}
 	
+*/
+	#close-menu-btn{
+		color: white;
+	}
 	
 	/* Left side hide button*/
 	.left-side{
+/*
 	background-color: var(--soft-gray);
 	color: var(--Deep-navy);
+*/
     top: 0;
 	height: 100%;
     left: -250px !important;
@@ -829,7 +834,6 @@ input:checked + .slider:before{
 	.user-info #close-btn{
 		right: 5px;
 		top: 15px;
-		color: var(--Deep-navy);
 	}
 	
 	#open-btn{
@@ -839,7 +843,7 @@ input:checked + .slider:before{
 	}
 	
 	.user-info{
-		background-color: var(--light-navy);
+/*		background-color: var(--light-navy);*/
 	}
 	
 	
@@ -895,6 +899,7 @@ input:checked + .slider:before{
 	}
 	
 	/*Social Ions*/
+/*
 	.social-icons{
 		background-color: var(--light-navy);
 	}
@@ -909,6 +914,7 @@ input:checked + .slider:before{
 	.progress-bar{
 		background-color: var(--light-navy);
 	}
+*/
 	
 	/* ABOUT US SECTION*/
 	#about-me{
@@ -917,6 +923,7 @@ input:checked + .slider:before{
 		padding: 50px 10px;
 		height: 100%;
 	}
+	
 	.wrapper{
 		flex-direction: column-reverse;
 	}
@@ -954,7 +961,8 @@ input:checked + .slider:before{
 	}
 	
 	/* Light Mode */
-	.light-mode #open-btn{
+	.light-mode #open-btn,
+	.light-mode #close-btn{
 		color: var(--Deep-navy);
 	}
 	
@@ -966,6 +974,7 @@ input:checked + .slider:before{
 
 @media screen and (max-width: 1200px){
 	/*Navigation Menu*/
+/*
 	.menu-icon .nav-menu{
 		background-color: var(--soft-gray);
 		color: var(--Deep-navy);
@@ -986,11 +995,14 @@ input:checked + .slider:before{
 	#close-menu-btn{
 		color: var(--Deep-navy);
 	}
+*/
 	
 	/* Left side hide button*/
 	.left-side{
+/*
 	background-color: var(--soft-gray);
 	color: var(--Deep-navy);
+*/
     top: 0;
     left: -250px !important;
 	transition: 0.5s ease-in-out;
@@ -1020,7 +1032,6 @@ input:checked + .slider:before{
 	.user-info #close-btn{
 		right: 5px;
 		top: 15px;
-		color: var(--Deep-navy);
 	}
 	
 	#open-btn{
@@ -1030,7 +1041,7 @@ input:checked + .slider:before{
 	}
 	
 	.user-info{
-		background-color: var(--light-navy);
+/*		background-color: var(--light-navy);*/
 	}
 	
 	/*Middle Section*/
@@ -1046,5 +1057,34 @@ input:checked + .slider:before{
 	
 	.second-section{
 		padding: 20px;
+	}
+	
+	/*	About me section */
+	#about-me{
+		display: flex;
+		justify-content: center;
+		height: 100%;
+	}
+	
+	#abt-txt{
+		text-align: center;
+	}
+	
+	.column-two h3{
+		text-align: center;
+	}
+	
+	.wrapper{
+		flex-direction: column-reverse;
+	}
+	
+	/* Light Mode */
+	.light-mode #open-btn,
+	.light-mode #close-btn{
+		color: var(--Deep-navy);
+	}
+	
+	.light-mode .left-side{
+		background-color: var(--soft-gray);
 	}
 }
