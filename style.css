@@ -939,8 +939,6 @@ ul .first-list{
 	
 	/* hOMEPAGE */
 	#home{
-		display: flex;
-		justify-content: center;
 		padding: 100px 10px 50px;
 		height: 100%;
 	}
@@ -966,8 +964,6 @@ ul .first-list{
 
 	/* ABOUT US SECTION*/
 	#about-me{
-		display: flex;
-		justify-content: center;
 		padding: 50px 10px;
 		height: 100%;
 	}
@@ -1024,9 +1020,7 @@ ul .first-list{
 		justify-content: center;
 		padding: 50px 10px;
 		height: 100%;
-		max-width: 22rem;
 	}
-	
 	.resume-section{
 		flex-direction: column;
 		padding: 0 20px;
