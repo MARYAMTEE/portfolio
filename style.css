@@ -19,7 +19,7 @@
 
 /* General styling*/
 body{
-	font-weight: normal !important;
+	font-weight: 500 !important;
 	font-family: "Inter", serif;
 	color: white;
 	background-color: var(--Deep-navy);
@@ -572,7 +572,7 @@ input:checked + .slider:before{
 }
 
 .skills-container p {
-	font-weight: bold;
+	font-weight: bold !important;
 }
 
 .column{
@@ -650,7 +650,7 @@ input:checked + .slider:before{
 .percentage {
     position: absolute;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: bold !important;
 	color: white;
 }
 
