@@ -57,7 +57,8 @@ function createStars(count) {
             }
         }
 
-		document.body.style.overflowX = "hidden";
+		document.documentElement.style.overflowX = "hidden";
+		document.body.style.overflowX = "hidden";	
 
         createStars(200); 
 
