@@ -23,8 +23,8 @@ body{
 	-moz-osx-font-smoothing: grayscale;
   	font-smooth: always;
   	text-rendering: optimizeLegibility;
-	font-weight: 500 !important;
-	font-family: "Inter", serif;
+	font-weight: 600 !important;
+	font-family: "Exo 2", sans-serif;
 	color: white;
 	background-color: var(--Deep-navy);
 	overflow-x: hidden;
@@ -857,7 +857,6 @@ input:checked + .slider:before{
 
 .resume-section ul .certs-list{
 	padding-bottom: 15px;
-	font-weight: 500 !important;
 }
 
 ul .first-list{
