@@ -57,6 +57,8 @@ function createStars(count) {
             }
         }
 
+		document.body.style.overflowX = "hidden";
+
         createStars(200); 
 
 // Toogle button
