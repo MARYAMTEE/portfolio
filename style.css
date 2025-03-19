@@ -531,12 +531,12 @@ input:checked + .slider:before{
 }
 
 /* About Me Section*/
-#abt-txt{
+.abt-txt{
 	font-family: "Montserrat", serif;
 	font-size: 40px;
 	font-weight: bold !important;
 	letter-spacing: 3px;
-	background-image: linear-gradient(135deg, white, var(--cool-mint));
+	background-image: linear-gradient(135deg, var(--cool-mint), white, var(--cool-mint));
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -753,7 +753,7 @@ input:checked + .slider:before{
 	border: 2px solid var(--Deep-navy);
 }
 
-.light-mode #abt-txt{
+.light-mode .abt-txt{
 	background-image: linear-gradient(135deg, var(--cool-mint) , var(--Deep-navy), var(--cool-mint));
 }
 
@@ -790,10 +790,10 @@ input:checked + .slider:before{
 }
 
 .light-mode .resume-section h1{
-	text-decoration: 2px underline var(--Deep-navy);
+	text-decoration: 2px underline var(--Deep-navy) !important;
 }
 
-.light-mode #middle-line{
+.light-mode .middle-line, .light-mode .side-line{
 	border-left: 2px solid var(--Deep-navy);
 }
 
@@ -805,16 +805,21 @@ input:checked + .slider:before{
 
 .resume-section{
 	display: flex;
-	height: 500px;
+	height: 450px;
+	padding: 50px 0;
 }
 
-#middle-line{
+.side-line{
+	display: none;
+}
+
+.middle-line{
 	border-left: 2px solid white;
 	padding: 0 15px;
 	position: relative;
 }
 
-#middle-line::before{
+.middle-line::before{
 	content: "";
 	position: absolute;
 	top: 0;
@@ -978,7 +983,7 @@ ul .first-list{
 		max-width: 22rem;
 	}
 	
-	#abt-txt{
+	.abt-txt{
 		text-align: center;
 		font-size: 20px;
 	}
@@ -1027,16 +1032,40 @@ ul .first-list{
 		height: 0;
 	}
 	
-	#middle-line{
+	.middle-line{
 		display: none;
+	}
+	
+	.side-line{
+		display: block;
+		border-left: 2px solid white;
+		padding: 0 15px;
+		position: relative;
+	}
+	
+	.side-line::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: var(--cool-mint);
 	}
 	
 	.resume-section ul{
 		padding-top: 15px;
 	}
 	
+	.flex{
+		display: flex;
+	}
+	
 	.second-list-container{
 		justify-content: flex-start;
+		flex-direction: row;
 		padding-top: 30px;
 	}
 }
@@ -1093,6 +1122,7 @@ ul .first-list{
 	
 	.middle-section{
 		margin: 0;
+		height: 100%;
 	}
 	
 	.second-section{
@@ -1106,7 +1136,7 @@ ul .first-list{
 		height: 100%;
 	}
 	
-	#abt-txt{
+	.abt-txt{
 		text-align: center;
 	}
 	
