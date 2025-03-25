@@ -106,10 +106,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Change Background color
-const bgBtn = document.getElementById("bg-btn");
-const palette = document.querySelector(".palette");
+// Toggle visibility
+    const bgBtn = document.getElementById("bg-btn");
+    const palette = document.getElementById("palette");
 
+    bgBtn.addEventListener("click", () => {
+        palette.style.display = (palette.style.display === "none" || palette.style.display === "") ? "block" : "none";
+    });
+
+// Change Background color
  function changeBackground(color) {
     document.documentElement.style.setProperty("--saved-dark-bg", color);
     const body = document.body;
