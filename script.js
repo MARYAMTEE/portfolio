@@ -66,19 +66,75 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleSwitch = document.getElementById("switch");
     const body = document.body;
 
-    // Check if dark mode was previously enabled
-    if (localStorage.getItem("lightMode") === "enabled") {
+    //Retrieve stored colors
+    let savedBgColor = localStorage.getItem("bgColor");
+    let savedTextColor = localStorage.getItem("textColor");
+    let isLightMode = localStorage.getItem("lightMode") === "enabled";
+
+    //Apply saved background-color to dark mode
+    document.documentElement.style.setProperty("--saved-dark-bg", savedBgColor);
+
+    if(isLightMode) {
         body.classList.add("light-mode");
         toggleSwitch.checked = true;
-    }
+        body.style.color = savedBgColor;
+        body.style.backgroundColor = "#E5E5E5";
+    }else {
+        body.style.color = "white"; 
+		body.style.backgroundColor = savedBgColor;
+	}
 
     toggleSwitch.addEventListener("change", function () {
         if (this.checked) {
+            let latestBgColor = localStorage.getItem("bgColor") || "#222";
             body.classList.add("light-mode");
+            body.style.color = latestBgColor;
+            body.style.backgroundColor = "#E5E5E5";
             localStorage.setItem("lightMode", "enabled");
+            localStorage.setItem("textColor", latestBgColor);
         } else {
+            let latestTextColor = localStorage.getItem("textColor") || savedBgColor;
             body.classList.remove("light-mode");
+            body.style.color = "white";
+            body.style.backgroundColor = latestTextColor;
+			
+			// Update stored dark mode background color
+            localStorage.setItem("bgColor", latestTextColor);
+            document.documentElement.style.setProperty("--saved-dark-bg", latestTextColor);
             localStorage.setItem("lightMode", "disabled");
         }
     });
 });
+
+// Change Background color
+const bgBtn = document.getElementById("bg-btn");
+const palette = document.querySelector(".palette");
+
+ function changeBackground(color) {
+    document.documentElement.style.setProperty("--saved-dark-bg", color);
+    const body = document.body;
+
+    if(!body.classList.contains("light-mode")){
+        // Change background only in dark mode
+        body.style.backgroundColor = color;
+    }
+
+    // Store this color to be used as text color in light mode
+    localStorage.setItem("textColor", color);
+	  localStorage.setItem("bgColor", color);
+
+    // If in light mode, update text color
+    if(body.classList.contains("light-mode")){
+        body.style.color = color;
+		localStorage.setItem("textColor", color);
+    }
+}
+
+// Change Text Color in Light Mode
+function changeTextColor(color) {
+    const body = document.body;
+    if (body.classList.contains("light-mode")) {
+        body.style.color = color;
+        localStorage.setItem("textColor", color);
+    }
+}
