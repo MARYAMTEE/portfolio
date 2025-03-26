@@ -549,7 +549,7 @@ input:checked + .slider:before{
 }
 
 .about-text{
-	padding-bottom: 10px;
+	padding-bottom: 15px;
 }
 #about-me{
 	height: 100vh;
@@ -1089,6 +1089,7 @@ ul .first-list{
 		border-left: 2px solid white;
 		padding: 0 15px;
 		position: relative;
+		margin-top: 12px;
 	}
 	
 	.side-line::before{
