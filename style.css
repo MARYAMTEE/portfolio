@@ -15,7 +15,6 @@
 	--vtw: #d9d9d905;
 	--vt: #d9d9d912;
 	--soft-gray: #E5E5E5;
-	/* --bg-color: #14213D; */
 }
 
 /* General styling*/
@@ -229,8 +228,8 @@ body.show-mobile-menu header::before{
 }
 
 #user-identity p{
-	font-size: 12px;
-	font-weight: 500;
+	font-size: 14px;
+	font-weight: 600;
 	line-height: 2;
 }
 
@@ -439,7 +438,6 @@ input:checked + .slider:before{
 }
 
 #toggle-mode p{
-	font-size: 12px;
 	margin-top: -3px;
 	padding-left: 5px;
 }
@@ -500,7 +498,6 @@ input:checked + .slider:before{
 
 .para1-section2{
 	width: 340px;
-	font-size: 14px;
 	line-height: 1.3;
 	padding: 10px 0;
 }
@@ -552,7 +549,7 @@ input:checked + .slider:before{
 }
 
 .about-text{
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 }
 #about-me{
 	height: 100vh;
@@ -599,7 +596,6 @@ input:checked + .slider:before{
 
 .column-two p{
 	padding: 20px 0;
-	font-size: 14px;
 	line-height: 1.6;
 }
 
@@ -650,7 +646,7 @@ input:checked + .slider:before{
 	height: 85px;
 	border-radius: 50%;
 	background-color: var(--saved-dark-bg);
-}
+list-style: }
 
 .percentage {
     position: absolute;
@@ -754,10 +750,6 @@ input:checked + .slider:before{
 	border: 2px solid var(--saved-dark-bg);
 }
 
-.light-mode #user-image{
-	border: 3px solid var(--saved-dark-bg);
-}
-
 .light-mode .abt-txt{
 	background-image: linear-gradient(135deg, var(--cool-mint) , var(--Deep-navy), var(--cool-mint));
 }
@@ -815,7 +807,7 @@ input:checked + .slider:before{
 .resume-section{
 	display: flex;
 	height: 450px;
-	padding: 50px 0;
+	padding: 30px 0;
 }
 
 .side-line{
@@ -883,21 +875,21 @@ ul .first-list{
 }
 
 .pick-color-1{
-	background-color: #1C1C1C;
+	background-color: #161B22;
 }.pick-color-2{
-	background-color: #004D40;
+	background-color: #181818;
 }.pick-color-3{
-	background-color: #004225;
+	background-color: #100F1E;
 }.pick-color-4{
-	background-color: #4A001F;
+	background-color: #130F26;
 }.pick-color-5{
-	background-color: #4A001F;
+	background-color: #1A1325;
 }.pick-color-6{
 	background-color: #3B1E1E;
 }
 
 .palette{
-/*	display: none; */
+	display: none; 
 	position: absolute;
 	bottom: 40px;
 	right: 0;
@@ -1001,8 +993,7 @@ ul .first-list{
 	
 	.second-section{
 		width: 350px;
-		height: 200px;
-		padding: 20px;
+		padding: 20px 10px;
 	}
 	
 	/* hOMEPAGE */
@@ -1017,8 +1008,7 @@ ul .first-list{
 	}
 	
 	.para1-section2{
-		
-		width: 300px
+		width: 330px;
 	}
 	
 	.btns{
@@ -1027,7 +1017,7 @@ ul .first-list{
 	}
 	
 	.heading-1-section2{
-		font-size: 14px;
+		font-size: 18px;
 	}
 
 	/* ABOUT US SECTION*/
@@ -1196,7 +1186,7 @@ ul .first-list{
 	}
 	
 	.second-section{
-		padding: 20px;
+		padding: 20px 10px;
 	}
 	
 	/*	About me section */
