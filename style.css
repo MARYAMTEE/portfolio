@@ -95,7 +95,7 @@ button:hover{
 		transform: translateY(0px) translateX(0px);
 	}
 	50%{
-		transform: translateY(-20px) translateX(20px);
+		transform: translateY(-20px) translateX(15px);
 	}
 	100%{
 		transform: translateY(0px) translateX(0px);
@@ -458,7 +458,6 @@ input:checked + .slider:before{
 
 .social-icons li a{
 	color: white;
-	transition: color 0.5s ease, transform 0.3s ease;
 }
 
 .social-icons li a:hover{
@@ -658,7 +657,7 @@ list-style: }
 /* Progress Circle animation*/
 .html-circle{
 	background: conic-gradient(white calc(80 * 3.6deg), var(--vt) calc(80 * 3.6deg));
-	animation: html-circle 3s;
+	animation: html-circle 0s;
 }
 
 @keyframes html-circle{
@@ -672,13 +671,13 @@ list-style: }
 
 .css-circle{
 	background: conic-gradient(white calc(85 * 3.6deg), var(--vt) calc(85 * 3.6deg));
-	animation: css-circle 3s;
+	animation: css-circle 0s;
 }
 
 @keyframes css-circle{
 	0% {
-                background: conic-gradient(white 0deg, var(--vt) 0deg);
-            }
+         background: conic-gradient(white 0deg, var(--vt) 0deg);
+      }
 	100% {
 		background: conic-gradient(white calc(85 * 3.6deg), var(--vt) calc(35 * 3.6deg));
 	}
@@ -686,7 +685,7 @@ list-style: }
 
 .javascript-circle{
 	background: conic-gradient(var(--cool-mint) calc(50 * 3.6deg), var(--vt) calc(50 * 3.6deg));
-	animation: javascript-circle 3s;
+	animation: javascript-circle 0s;
 }
 
 @keyframes javascript-circle{
@@ -700,12 +699,12 @@ list-style: }
 
 .bootstrap-circle{
 	background: conic-gradient(white calc(70 * 3.6deg), var(--vt) calc(70 * 3.6deg));
-	animation: bootstrap-circle 3s;
+	animation: bootstrap-circle 0s;
 }
 
 @keyframes bootstrap-circle{
 	0% {
-                background: conic-gradient(white 0deg, var(--vt) 0deg);
+        background: conic-gradient(white 0deg, var(--vt) 0deg);
             }
 	100% {
 		background: conic-gradient(white calc(70 * 3.6deg), var(--vt) calc(70 * 3.6deg));
@@ -1121,11 +1120,13 @@ ul .first-list{
 	}
 	
 	.wrapper{
+		width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
 		flex-direction: column-reverse;
 	}
 	
 	.about-wrapper{
-		
 		width: 100%;
 		max-width: 22rem;
 	}
@@ -1141,8 +1142,29 @@ ul .first-list{
 	}
 	
 	.column-one{
-		grid-template-columns: 1fr;
+		display: flex;
+		width: fit-content;
+		padding-left: 100%;
+		-webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%);
+      	-webkit-mask-size: 200% 100%;
+      	-webkit-mask-position: 0% 0%;
+      	-webkit-mask-repeat: no-repeat;
+        animation: scrollLoop 5s linear infinite;
+		animation-play-state: running;
 	}
+	
+	.wrapper:hover .column-one {
+	  animation-play-state: paused;
+	}
+	
+	@keyframes scrollLoop {
+	  0% {
+		transform: translateX(0%);
+	  }
+	  100% {
+		transform: translateX(-100%);
+	  }
+}
 	
 	.skills-container{
 		padding: 20px;
