@@ -1145,10 +1145,6 @@ ul .first-list{
 		display: flex;
 		width: fit-content;
 		padding-left: 100%;
-		-webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%);
-      	-webkit-mask-size: 200% 100%;
-      	-webkit-mask-position: 0% 0%;
-      	-webkit-mask-repeat: no-repeat;
         animation: scrollLoop 5s linear infinite;
 		animation-play-state: running;
 	}
