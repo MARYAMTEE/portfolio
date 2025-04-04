@@ -149,7 +149,6 @@ body.show-mobile-menu header::before{
 	align-items: center;
 	font-size: 14px;
 	font-weight: bold;
-	gap: 40px;
 }
 
 .menu-icon .nav-item{
@@ -161,6 +160,7 @@ body.show-mobile-menu header::before{
 	display: flex;
     align-items: center;
 	justify-content: center;
+	gap: 40px;
 }
 
 .menu-icon #open-menu-btn, #close-menu-btn{
@@ -553,7 +553,7 @@ input:checked + .slider:before{
 }
 #about-me{
 	height: 100vh;
-	padding: 25px 70px;
+	padding: 0 70px;
 }
 
 .wrapper{
@@ -736,7 +736,7 @@ list-style: }
 .light-mode .user-info p,
 .light-mode .social-icons li a, 
 .light-mode #open-menu-btn,
-.light-mode #close-menu-btn {
+.light-mode #close-menu-btn, .light-mode .overlay a{
     color: var(--saved-dark-bg);
 }
 
@@ -754,7 +754,7 @@ list-style: }
 	background-image: linear-gradient(135deg, var(--cool-mint) , var(--Deep-navy), var(--cool-mint));
 }
 
-.light-mode .nav-item{
+.light-mode .nav-item, .light-mode .project{
 	background-color: var(--light-navy);
 }
 
@@ -1115,7 +1115,7 @@ ul .first-list{
 	}
 
 	/* ABOUT US SECTION*/
-	#about-me{
+	#about-me, #project{
 		padding: 50px 10px;
 		height: 100%;
 	}
