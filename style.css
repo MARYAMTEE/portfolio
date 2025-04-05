@@ -645,7 +645,8 @@ input:checked + .slider:before{
 	height: 85px;
 	border-radius: 50%;
 	background-color: var(--saved-dark-bg);
-list-style: }
+	list-style-type:  none; 
+}
 
 .percentage {
     position: absolute;
@@ -916,7 +917,7 @@ ul .first-list{
 
 
 /* Project Section */
-#project{
+#project-desktop{
 	height: 100vh;
 	padding: 0 70px;
 }
@@ -1008,6 +1009,11 @@ ul .first-list{
   	-ms-transform: translate(-50%, -50%);
   	transform: translate(-50%, -50%);
 }
+
+.slider-container{
+	display: none;
+}
+
 /* Mobile device viewport*/
 @media screen and (max-width: 700px){
 	
@@ -1016,7 +1022,7 @@ ul .first-list{
 		font-size: 16px;
 		position: relative;
 		overflow-x: hidden;
-  		overflow-y: auto;
+  		overflow-y: hidden;
 	}
 	
 	#close-menu-btn{
@@ -1069,13 +1075,13 @@ ul .first-list{
 	.middle-section{
 		margin: 0;
 		height: 100%;
-		
 	}
 	
 	.description-info{
 		display: block;
 		text-align: center;
 	}
+	
 	.section2-image{
 		display: none;
 	}
@@ -1114,7 +1120,7 @@ ul .first-list{
 	}
 
 	/* ABOUT US SECTION*/
-	#about-me, #project{
+	#about-me, #project-mobile{
 		padding: 50px 10px;
 		height: 100%;
 	}
@@ -1249,7 +1255,7 @@ ul .first-list{
 		margin-bottom: 25px;
 	}
 	.project:nth-child(1){
-	background-image: url("media/preview-mobile.png")
+	background-image: url("media/preview-mobile.png");
 	}
 	.project:nth-child(2){
 		background-image: url("media/card-feature-mobile.png");
@@ -1268,7 +1274,40 @@ ul .first-list{
 		display: block;
 		margin: 25px;
 	}
+	
+	/*	Slider section*/
+	
+	.slider-container{
+	display: inline-block;
+		width: 100%;
 }
+	.desktop-section{
+		display: none;
+	}
+	
+	.slider-container{
+		position: relative;
+		overflow: hidden;
+	}
+	
+	.slide-icon{
+		position: absolute;
+		top: 50%;
+		background-color: rgba(0, 0, 0, 0.5);
+		color: white;
+		border: none;
+		padding: 10px;
+		cursor: pointer;
+	}
+	
+	#prev {
+    left: 10px;
+}
+	#next {
+    right: 10px;
+}
+}
+
 
 
 @media screen and (max-width: 1200px){
