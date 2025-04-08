@@ -273,6 +273,7 @@ body.show-mobile-menu header::before{
 	display: block;
 	background-color: var(--vtw);
 	border-radius: 50px;
+	z-index: 0;
 }
 
 .progress-bar span{
@@ -494,7 +495,17 @@ input:checked + .slider:before{
 /*H1*/
 .heading-1-section2{
 	text-transform: uppercase;
+	white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #2c3e50;
+    width: 0;
+    animation: typing 3s steps(27, end) forwards;
 }
+
+@keyframes typing {
+      from { width: 0; }
+      to { width: 27ch; }
+    }
 
 .para1-section2{
 	width: 340px;
@@ -1406,15 +1417,15 @@ ul .first-list{
 	}
 	
 	.side-line::before{
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: translate(-50%, -50%);
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background-color: var(--cool-mint);
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate(-50%, -50%);
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: var(--cool-mint);
 	}
 	
 	.resume-section ul{
@@ -1432,11 +1443,21 @@ ul .first-list{
 	}
 	
 	.color-palette{
-	right: 0px;
+		right: 5px;
+		z-index: 2000;
 	}
 	
 	.palette{
 		border: none;
+	}
+	
+	.color-option{
+		width: 25px;
+		height: 25px;
+	}
+	
+	#bg-btn{
+		font-size: 30px;
 	}
 	
 	.light-mode .palette{
@@ -1446,14 +1467,16 @@ ul .first-list{
 	/* Project section */
 	
 	#project-mobile{
+		height: 250px;
 		padding: 10px;
 	}
+	
 	.project{
 		height: 200px;
 		margin-bottom: 25px;
 	}
 	.project:nth-child(1){
-	background-image: url("media/preview-mobile.png");
+		background-image: url("media/preview-mobile.png");
 	}
 	.project:nth-child(2){
 		background-image: url("media/card-feature-mobile.png");
@@ -1485,6 +1508,7 @@ ul .first-list{
 		position: relative;
 		overflow: hidden;
 	}
+	
 	.desktop-section{
 		display: none;
 	}
