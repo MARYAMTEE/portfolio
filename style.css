@@ -761,7 +761,8 @@ input:checked + .slider:before{
 .light-mode #close-menu-btn, .light-mode .overlay a,
 .light-mode .icon i, 
 .light-mode .social-links a,
-.light-mode .box p, .light-mode .box p a{
+.light-mode .box p, .light-mode .box p a,
+.light-mode .column-two table td{
     color: var(--saved-dark-bg);
 }
 
