@@ -1,4 +1,4 @@
-// JavaScript Document
+
 const navLinks = document.querySelectorAll(".nav-list .nav-link");
 const menuOpenButton = document.querySelector("#open-menu-btn");
 const menuCloseButton = document.querySelector("#close-menu-btn");
@@ -118,10 +118,20 @@ document.addEventListener("DOMContentLoaded", function () {
 // Toggle visibility
     const bgBtn = document.getElementById("bg-btn");
     const palette = document.getElementById("palette");
+	const closePalette = document.getElementById("close-palette")
 
     bgBtn.addEventListener("click", () => {
         palette.style.display = (palette.style.display === "none" || palette.style.display === "") ? "block" : "none";
     });
+
+	closePalette.addEventListener("click", () => bgBtn.click());
+
+	document.addEventListener("click", (event) => {
+    const isClickInside = palette.contains(event.target) || bgBtn.contains(event.target);
+    if (!isClickInside && palette.style.display === "block") {
+        palette.style.display = "none";
+    }
+});
 
 // Change Background color
 const colorPalette = ["#161B22", "#181818", "#100F1E", "#282A36", "#1A1325", "#3B1E1E"];

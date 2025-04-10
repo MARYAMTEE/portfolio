@@ -758,7 +758,10 @@ input:checked + .slider:before{
 .light-mode .user-info p,
 .light-mode .social-icons li a, 
 .light-mode #open-menu-btn,
-.light-mode #close-menu-btn, .light-mode .overlay a, .light-mode .icon i, .light-mode .social-links a{
+.light-mode #close-menu-btn, .light-mode .overlay a,
+.light-mode .icon i, 
+.light-mode .social-links a,
+.light-mode .box p, .light-mode .box p a{
     color: var(--saved-dark-bg);
 }
 
@@ -939,6 +942,13 @@ ul .first-list{
 
 #bg-btn:hover{
 	 transform: rotate(90deg);
+}
+
+#close-palette{
+	font-size: 15px;
+	display: absolute;
+	left: 0;
+	padding: 0;
 }
 
 
