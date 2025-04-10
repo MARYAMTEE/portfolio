@@ -80,9 +80,18 @@ document.addEventListener("DOMContentLoaded", function () {
         body.style.color = savedBgColor;
         body.style.backgroundColor = "#E5E5E5";
     }else {
-        body.style.color = "white"; 
-		body.style.backgroundColor = savedBgColor;
-	}
+    // Always reset to default color when loading in dark mode
+    const defaultDarkColor = colorPalette[0];
+    body.style.color = "white";
+    body.style.backgroundColor = defaultDarkColor;
+
+    // Set CSS variable and update localStorage
+    document.documentElement.style.setProperty("--saved-dark-bg", defaultDarkColor);
+    localStorage.setItem("bgColor", defaultDarkColor);
+}
+
+
+
 
     toggleSwitch.addEventListener("change", function () {
         if (this.checked) {
@@ -115,6 +124,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 // Change Background color
+const colorPalette = ["#161B22", "#181818", "#100F1E", "#282A36", "#1A1325", "#3B1E1E"];
+
  function changeBackground(color) {
     document.documentElement.style.setProperty("--saved-dark-bg", color);
     const body = document.body;
@@ -126,7 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Store this color to be used as text color in light mode
     localStorage.setItem("textColor", color);
-	  localStorage.setItem("bgColor", color);
 
     // If in light mode, update text color
     if(body.classList.contains("light-mode")){

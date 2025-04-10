@@ -26,7 +26,6 @@ body{
 	font-weight: 600 !important;
 	font-family: "Exo 2", sans-serif;
 	color: white;
-	background-color: var(--Deep-navy);
 	overflow-x: hidden;
 	overflow-y: auto;
 	width: 100%;
@@ -175,7 +174,7 @@ body.show-mobile-menu header::before{
 .menu-icon #close-menu-btn{
 	position:absolute;
 	top: 30px;
-	left: 10px;
+	left: 0;
 }
 
 .menu-icon{
@@ -1022,7 +1021,7 @@ ul .first-list{
   	-ms-transform: scale(0);
   	transform: scale(0);
 	-webkit-transition: 0.5s ease;
-	transition: .5s ease;
+	transition: .7s ease;
 	clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%, 0 50px);
 }
 
