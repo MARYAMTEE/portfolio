@@ -169,6 +169,7 @@ body.show-mobile-menu header::before{
 	display: block;
 	color: white;
 	position: fixed;
+	z-index: 5;
 }
 
 .menu-icon #close-menu-btn{
@@ -520,6 +521,11 @@ input:checked + .slider:before{
 	padding-top: 10px;
 }
 
+.btns a {
+	color: white;
+	text-decoration: none;
+}
+
 .git-btn{
 	background-color: var(--cool-mint);
 	border: 3px solid var(--cool-mint);
@@ -617,7 +623,12 @@ input:checked + .slider:before{
 }
 
 .column-two table td{
+	color: white;
 	padding: 16px;
+}
+
+.column-two table td a{
+	color: white;
 }
 
 .column-two table th{
@@ -1059,6 +1070,10 @@ ul .first-list{
 	display: flex;
 }
 
+.box p, .box p a{
+	color: white;
+}
+
 .icon{
 	min-width: 45px;
 	height: 45px;
@@ -1303,7 +1318,10 @@ ul .first-list{
 	
 	/* hOMEPAGE */
 	#home{
+		display: flex;
+        justify-content: center;
 		padding: 100px 10px 50px;
+		height: 100%;
 	}
 	
 	button{
@@ -1325,7 +1343,17 @@ ul .first-list{
 	}
 
 	/* ABOUT US SECTION*/
-	#about-me, #contact{
+	#about-me, #resume{
+		display: flex;
+		justify-content: center;
+		padding: 50px 10px 0;
+	}
+	
+	#about-me{
+		height: 100%;
+	}
+
+	#contact{
 		padding: 50px 10px;
 	}
 	
@@ -1333,6 +1361,7 @@ ul .first-list{
 		width: 100%;
 		overflow: hidden;
 		display: flex;
+		flex-direction: column-reverse;
 		position: relative;
 	}
 	
@@ -1393,9 +1422,7 @@ ul .first-list{
 	
 	/* Resume Section */
 	#resume{
-		display: flex;
-		justify-content: center;
-		padding: 50px 10px 0;
+		height: 700px;
 	}
 	
 	.resume-section{
@@ -1540,7 +1567,7 @@ ul .first-list{
 	/* Contact Section */
 	.container-contact{
 		flex-direction: column;
-		padding: 0 20px 20px;
+		padding: 0 20px 50px;
 	}
 	
 	.contact-info, .contact-form{
@@ -1551,7 +1578,7 @@ ul .first-list{
 
 
 
-@media screen and (max-width: 1200px){
+@media (min-width: 701px) and (max-width: 1200px){
 	
 	/* Left side hide button*/
 	.left-side{
@@ -1598,11 +1625,16 @@ ul .first-list{
 		display: flex;
 		justify-content: center;
 		height: 100%;
+		padding: 100px 50px;
 	}
 	
 	.middle-section{
 		margin: 0;
 		height: 100%;
+	}
+	
+	.description-info {
+		justify-content: space-around;
 	}
 	
 	.second-section{
@@ -1614,6 +1646,7 @@ ul .first-list{
 		display: flex;
 		justify-content: center;
 		height: 100%;
+		padding: 10px 50px;
 	}
 	
 	.abt-txt{
@@ -1636,5 +1669,15 @@ ul .first-list{
 	
 	.light-mode .left-side{
 		background-color: var(--soft-gray);
+	}
+	/* Resume */
+	#resume{
+		padding: 50px;
+		height: 100%;
+	}
+	
+	/* Project*/
+	#project-desktop{
+		padding: 5px 50px;
 	}
 }
