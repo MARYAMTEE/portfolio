@@ -1069,7 +1069,6 @@ ul .first-list{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-wrap: wrap;
 	gap: 50px;
 }
 
@@ -1581,6 +1580,7 @@ ul .first-list{
 	
 	/* Contact Section */
 	.container-contact{
+		flex-wrap: wrap;
 		padding: 0 10px 50px;
 	}
 	
@@ -1678,6 +1678,10 @@ ul .first-list{
 	/* Contact */
 	#contact{
 		padding: 50px 10px;
+	}
+
+	.container-contact{
+		flex-wrap: wrap;
 	}
 
 	
